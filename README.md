@@ -11,7 +11,7 @@ Open source
 
 # Usage
 
-Very simple. Get the Maghrib and Fajr times for your location and make sure they are correct!
+Very simple. Get the Maghrib and Fajr times for your location (make sure they are correct)! Once you've selected the times, click on 'Calculate'.
 
 # Development
 
