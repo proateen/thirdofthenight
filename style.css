@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+html {
+  min-height: 100%;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  height: 100%;
+  color: #333;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+}
+
+.input {
+  background-color: rgba(255, 255, 255, 0.45);
+  height: 12em;
+  backdrop-filter: blur(3em);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.5em;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5em;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .input {
+    height: 18em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
+
+.maghribtext {
+  position: relative;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-align: center;
+  margin: 0em;
+  margin-bottom: 2px;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .maghribtext {
+    font-size: 2em;
+    margin-bottom: 2px;
+  }
+}
+
+.maghribinput {
+  align-content: center;
+  font-size: 1em;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .maghribinput {
+    position: relative;
+    font-size: 1.5em;
+    margin: 0em;
+    margin-bottom: 2px;
+  }
+}
+
+.fajrtext {
+  position: relative;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-align: center;
+  margin: 0em;
+  margin-bottom: 2px;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .fajrtext {
+    font-size: 2em;
+    margin-bottom: 2px;
+  }
+}
+
+.fajrinput {
+  align-items: center;
+  font-size: 1em;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .fajrinput {
+    position: relative;
+    font-size: 1.5em;
+    margin: 0em;
+    margin-bottom: 2px;
+  }
+}
+
+.calculate {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 0.5em;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgb(0 0 0 / 10%);
+  margin: 1em;
+  outline: none;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .calculate {
+    font-size: 1.5em;
+  }
+}
+
+.results {
+  background-color: rgba(255, 255, 255, 0.45);
+  height: 12em;
+  backdrop-filter: blur(3em);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.5em;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5em;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .results {
+    height: 18em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
+
+.thirdtext {
+  position: relative;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .thirdtext {
+    font-size: 2em;
+  }
+}
+
+.third {
+  position: relative;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  font-weight: 1000;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-align: center;
+  visibility: hidden;
+  margin: 0em;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .third {
+    font-size: 2em;
+  }
+}
+
+.disclaimer {
+  position: relative;
+  font-size: 0.5em;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  visibility: hidden;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .disclaimer {
+    font-size: 1em;
+  }
+}
+
+.plug {
+  position: relative;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .plug {
+    font-size: 2em;
+  }
+}
+
+.plzdonatebro {
+  background-color: rgba(255, 255, 255, 0.45);
+  height: 12em;
+  backdrop-filter: blur(3em);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.5em;
+  overflow: hidden;
+  flex-flow: column;
+  flex: 50%;
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .plzdonatebro {
+    height: 18em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
+
+.donate-crypto-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.5em;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: text;
+}
+
+.coin {
+  display: inline-block;
+  position: relative;
+  min-width: 3em;
+  min-height: 3em;
+  -webkit-animation: spin 3s cubic-bezier(0.3, 2, 0.4, 0.8) infinite both;
+  animation: spin 3s cubic-bezier(0.3, 2, 0.4, 0.8) infinite both;
+  transform-style: preserve-3d;
+  vertical-align: middle;
+}
+@-webkit-keyframes spin {
+  0%,
+  10% {
+    transform: rotate(-10deg) perspective(400px);
+  }
+  90%,
+  100% {
+    transform: rotate(-10deg) perspective(400px) rotateY(180deg);
+  }
+}
+@keyframes spin {
+  0%,
+  10% {
+    transform: rotate(-10deg) perspective(400px);
+  }
+  90%,
+  100% {
+    transform: rotate(-10deg) perspective(400px) rotateY(180deg);
+  }
+}
+
+.coin-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+}
+.coin-face:nth-child(1) {
+  transform: translateZ(-0.2em) rotateY(-180deg);
+}
+.coin-face:nth-child(2) {
+  transform: translateZ(-0.1em);
+}
+.coin-face:nth-child(4) {
+  transform: translateZ(0.1em);
+}
+.coin-face:nth-child(5) {
+  transform: translateZ(0.2em);
+}
+.coin-face svg {
+  width: 100%;
+  height: 100%;
+}
+
+.coin-address {
+  flex: 1;
+  font-size: 0.6em;
+  text-align: center;
+  margin-left: 1em;
+  border-width: 0 0 2px;
+  border-color: rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s;
+  background: transparent;
+  outline: none;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .coin-address {
+    font-size: 1.3em;
+  }
+}
+
+.coin-address:hover {
+  transition-duration: 0.1s;
+}
+
+.btc .coin-face {
+  background: shade(#ff9900, 35%);
+}
+.btc .coin-face:nth-child(1),
+.btc .coin-face:nth-child(5) {
+  background: #ff9900;
+}
+.btc .coin-address:hover,
+.btc .coin-address:focus {
+  border-color: #ff9900;
+}
+
+.eth .coin-face {
+  background: shade(#6f7cba, 35%);
+}
+.eth .coin-face:nth-child(1),
+.eth .coin-face:nth-child(5) {
+  background: #6f7cba;
+}
+.eth .coin-address:hover,
+.eth .coin-address:focus {
+  border-color: #6f7cba;
+}
+
+.bnb .coin-face {
+  background: shade(#ff9900, 35%);
+}
+.bnb .coin-face:nth-child(1),
+.bnb .coin-face:nth-child(5) {
+  background: #ff9900;
+}
+.bnb .coin-address:hover,
+.bnb .coin-address:focus {
+  border-color: #ff9900;
+}
+
+.donate-crypto-box:nth-child(1) .coin {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.donate-crypto-box:nth-child(2) .coin {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.donate-crypto-box:nth-child(3) .coin {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
