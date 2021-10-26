@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head> 
-<!-- Google Analytics -->
-<script>
-  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  ga('create', 'UA-194308997-1', {
-  'storage': 'none'
-});
-  ga('send', 'pageview');
-  </script>
-  <script async src='https://www.google-analytics.com/analytics.js'></script>
-  <!-- End Google Analytics -->
+  <head>
+    <!-- Google Analytics -->
+    <script>
+      window.ga =
+        window.ga ||
+        function () {
+          (ga.q = ga.q || []).push(arguments);
+        };
+      ga.l = +new Date();
+      ga("create", "UA-194308997-1", {
+        storage: "none",
+      });
+      ga("send", "pageview");
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <!-- End Google Analytics -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <title>Third of The Night - Calculate the last third of the night, tahajjud calculator, qiyam al layl calculator.</title>
-    <meta name="description" content="Calculate the last third of the night by entering the time for Maghrib and Fajr. One of the easiest ways if you want to pray tahajjud or qiyam al layl or want to make dua in the last third of the night.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <title>
+      Third of The Night - Calculate the last third of the night, tahajjud
+      calculator, qiyam al layl calculator.
+    </title>
+    <meta
+      name="description"
+      content="Calculate the last third of the night by entering the time for Maghrib and Fajr. One of the easiest ways if you want to pray tahajjud or qiyam al layl or want to make dua in the last third of the night."
+    />
   </head>
   <body>
     <div class="wrapper">
@@ -44,59 +55,35 @@
       <div class="results" id="results">
         <h2 class="thirdtext">Last ⅓ of night starts</h2>
         <p class="third" id="third">0</p>
-        <p class="disclaimer" id="disclaimer">
-          Accurate to the nearest min. Pray 1 min after this time and you are
-          definitely in the last ⅓ of the night.
-        </p>
-        <p class="plug" id="plug">
-          <a href="https://jamilabab.com/">Jilbabs</a> |
-          <a href="https://github.com/proateen">GitHub</a> | Donate below 👇
-        </p>
+        <h2 class="midnighttext">Midnight starts</h2>
+        <p class="midnight" id="midnight">0</p>
+        <button class="disclaimer" id="disclaimer">DISCLAIMER (MUST READ)</button>
+        </button>
       </div>
-      <div class="plzdonatebro">
-        <label class="btc donate-crypto-box">
-          <div class="coin">
-            <div class="coin-face">
-              <svg height="10" viewBox="0 0 32 32" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M21.78 15.37c.51-.61.83-1.4.83-2.26 0-2.74-1.6-4.38-4.24-4.38V5.45c0-.12-.1-.22-.22-.22h-1.27c-.11 0-.2.1-.2.21v3.3h-1.7V5.44c0-.12-.1-.22-.22-.22H13.5c-.12 0-.2.1-.21.21v3.3H9.67c-.12 0-.21.09-.21.21v1.31c0 .12.1.22.21.22h.21c.94 0 1.7.79 1.7 1.75v7c0 .92-.68 1.67-1.55 1.75a.21.21 0 0 0-.18.16l-.33 1.32c-.01.06 0 .13.04.19.04.05.1.08.17.08h3.55v3.3c0 .1.1.2.2.2h1.28c.12 0 .21-.1.21-.22v-3.28h1.7v3.3c0 .1.1.2.21.2h1.27c.12 0 .22-.1.22-.22v-3.28h.85c2.65 0 4.24-1.64 4.24-4.37 0-1.28-.68-2.39-1.68-3zm-6.8-4.01h2.54c.94 0 1.7.78 1.7 1.75 0 .96-.76 1.75-1.7 1.75h-2.55v-3.5zm3.39 8.75h-3.4v-3.5h3.4c.93 0 1.7.78 1.7 1.75 0 .96-.77 1.75-1.7 1.75z" fill="#FFF"></path></svg>
-            </div>
-            <div class="coin-face"></div>
-            <div class="coin-face"></div>
-            <div class="coin-face"></div>
-            <div class="coin-face">
-              <svg height="10" viewBox="0 0 32 32" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M21.78 15.37c.51-.61.83-1.4.83-2.26 0-2.74-1.6-4.38-4.24-4.38V5.45c0-.12-.1-.22-.22-.22h-1.27c-.11 0-.2.1-.2.21v3.3h-1.7V5.44c0-.12-.1-.22-.22-.22H13.5c-.12 0-.2.1-.21.21v3.3H9.67c-.12 0-.21.09-.21.21v1.31c0 .12.1.22.21.22h.21c.94 0 1.7.79 1.7 1.75v7c0 .92-.68 1.67-1.55 1.75a.21.21 0 0 0-.18.16l-.33 1.32c-.01.06 0 .13.04.19.04.05.1.08.17.08h3.55v3.3c0 .1.1.2.2.2h1.28c.12 0 .21-.1.21-.22v-3.28h1.7v3.3c0 .1.1.2.21.2h1.27c.12 0 .22-.1.22-.22v-3.28h.85c2.65 0 4.24-1.64 4.24-4.37 0-1.28-.68-2.39-1.68-3zm-6.8-4.01h2.54c.94 0 1.7.78 1.7 1.75 0 .96-.76 1.75-1.7 1.75h-2.55v-3.5zm3.39 8.75h-3.4v-3.5h3.4c.93 0 1.7.78 1.7 1.75 0 .96-.77 1.75-1.7 1.75z" fill="#FFF"></path></svg>
-            </div>
-          </div>
-          <input class="coin-address" onclick="this.select()" readonly="readonly" spellcheck="false" type="text" value="bc1q4ve2z6jwj2t7n4s02qh80t7ga3j6dvuy44jvt9" /></label><label class="eth donate-crypto-box">
-          <div class="coin">
-            <div class="coin-face">
-              <svg height="10" viewBox="0 0 32 32" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M10.13 17.76c-.1-.15-.06-.2.09-.12l5.49 3.09c.15.08.4.08.56 0l5.58-3.08c.16-.08.2-.03.1.11L16.2 25.9c-.1.15-.28.15-.38 0l-5.7-8.13zm.04-2.03a.3.3 0 0 1-.13-.42l5.74-9.2c.1-.15.25-.15.34 0l5.77 9.19c.1.14.05.33-.12.41l-5.5 2.78a.73.73 0 0 1-.6 0l-5.5-2.76z" fill="#FFF"></path></svg>
-            </div>
-            <div class="coin-face"></div>
-            <div class="coin-face"></div>
-            <div class="coin-face"></div>
-            <div class="coin-face">
-              <svg height="8" viewBox="0 0 32 32" width="8" xmlns="http://www.w3.org/2000/svg"><path d="M10.13 17.76c-.1-.15-.06-.2.09-.12l5.49 3.09c.15.08.4.08.56 0l5.58-3.08c.16-.08.2-.03.1.11L16.2 25.9c-.1.15-.28.15-.38 0l-5.7-8.13zm.04-2.03a.3.3 0 0 1-.13-.42l5.74-9.2c.1-.15.25-.15.34 0l5.77 9.19c.1.14.05.33-.12.41l-5.5 2.78a.73.73 0 0 1-.6 0l-5.5-2.76z" fill="#fff"></path></svg>
-            </div>
-          </div>
-          <input class="coin-address" onclick="this.select()" readonly="readonly" spellcheck="false" type="text" value="0xcF56A863DF619E70382A2805b3088c56ae148B8D" /></label><label class="bnb donate-crypto-box">
-          <div class="coin">
-            <div class="coin-face">
-              <svg height="8" viewBox="0 0 2500.01 2500" width="8" xmlns="http://www.w3.org/2000/svg"><path d="M764.48,1050.52,1250,565l485.75,485.73,282.5-282.5L1250,0,482,768l282.49,282.5M0,1250,282.51,967.45,565,1249.94,282.49,1532.45Zm764.48,199.51L1250,1935l485.74-485.72,282.65,282.35-.14.15L1250,2500,482,1732l-.4-.4,282.91-282.12M1935,1250.12l282.51-282.51L2500,1250.1,2217.5,1532.61Z" fill="#fff"></path></svg>
-            </div>
-            <div class="coin-face"></div>
-            <div class="coin-face"></div>
-            <div class="coin-face"></div>
-            <div class="coin-face">
-              <svg height="8" viewBox="0 0 2500.01 2500" width="8" xmlns="http://www.w3.org/2000/svg"><path d="M764.48,1050.52,1250,565l485.75,485.73,282.5-282.5L1250,0,482,768l282.49,282.5M0,1250,282.51,967.45,565,1249.94,282.49,1532.45Zm764.48,199.51L1250,1935l485.74-485.72,282.65,282.35-.14.15L1250,2500,482,1732l-.4-.4,282.91-282.12M1935,1250.12l282.51-282.51L2500,1250.1,2217.5,1532.61Z" fill="#fff"></path></svg>
-            </div>
-          </div>
-          <input class="coin-address" onclick="this.select()" readonly="readonly" spellcheck="false" type="text" value="bnb1s3zpv0zuw946tgt34q3jn8tk4t06md9yn276u9" /></label>
+      <div class="jamilabab">
+        <a href="https://jamilabab.com/">
+        <img src="jamilabab-logo.png" class=jamilabablogo>
+        </a>
+        <a href="https://jamilabab.com/">
+        <h2 class="jamilababtext">CLICK TO BUY JILBABS. USE CODE "THIRD" FOR A DISCOUNT.</h2>
+      </a>
+      </div>
+    </div>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>As-salamu alaykum 👋</h1>
+      <p>
+        The calculated times displayed above are accurate to the nearest minute. In your case, this means if you pray or make dua at least 1 minute after <span class="userthird"></span>, this means you have definitely prayed or made dua in the last third of the night. Click <a href="https://islamqa.info/en/answers/291824/the-virtue-of-offering-supplication-in-the-last-third-of-the-night">here</a> to understand why the last third of the night is a special time for Muslims. As for the midnight value given to you (<span class="usermidnight"></span>), this is for those who believe the ‘Isha prayer must be performed before midnight. This is also accurate to the nearest minute, so this could mean midnight is actually 1 minute earlier than the value given to you. I must remind you that the calculator depends on you giving accurate times for Maghrib and Fajr, so you must ensure they are correct. Report issues to me on <a href="https://instagram.com/proateen">Instagram</a>. The code for this site is on <a href="https://github.com/proateen">GitHub</a>.
+      </p>
+    </div>
+    <div class="overlay hidden">
     </div>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
-      integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js"
+      integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
   </body>
 </html>
