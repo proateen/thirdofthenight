@@ -14,7 +14,9 @@ body {
   display: grid;
 }
 
-.input {
+.input,
+.results,
+.jamilabab {
   background-color: rgba(255, 255, 255, 0.45);
   height: 12em;
   backdrop-filter: blur(3em);
@@ -31,46 +33,7 @@ body {
   margin: 0.5em;
 }
 
-@media only screen and (min-device-width: 768px) {
-  .input {
-    height: 18em;
-    margin-left: 2em;
-    margin-right: 2em;
-  }
-}
-
-.maghribtext {
-  position: relative;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  word-spacing: 2px;
-  text-align: center;
-  margin: 0em;
-  margin-bottom: 2px;
-}
-
-@media only screen and (min-device-width: 768px) {
-  .maghribtext {
-    font-size: 2em;
-    margin-bottom: 2px;
-  }
-}
-
-.maghribinput {
-  align-content: center;
-  font-size: 1em;
-}
-
-@media only screen and (min-device-width: 768px) {
-  .maghribinput {
-    position: relative;
-    font-size: 1.5em;
-    margin: 0em;
-    margin-bottom: 2px;
-  }
-}
-
+.maghribtext,
 .fajrtext {
   position: relative;
   font-size: 1.5em;
@@ -82,28 +45,14 @@ body {
   margin-bottom: 2px;
 }
 
-@media only screen and (min-device-width: 768px) {
-  .fajrtext {
-    font-size: 2em;
-    margin-bottom: 2px;
-  }
-}
-
+.maghribinput,
 .fajrinput {
-  align-items: center;
+  align-content: center;
   font-size: 1em;
 }
 
-@media only screen and (min-device-width: 768px) {
-  .fajrinput {
-    position: relative;
-    font-size: 1.5em;
-    margin: 0em;
-    margin-bottom: 2px;
-  }
-}
-
-.calculate {
+.calculate,
+.disclaimer {
   position: relative;
   background: none;
   border: none;
@@ -120,38 +69,15 @@ body {
   outline: none;
 }
 
-@media only screen and (min-device-width: 768px) {
-  .calculate {
-    font-size: 1.5em;
-  }
-}
-
-.results {
-  background-color: rgba(255, 255, 255, 0.45);
-  height: 12em;
-  backdrop-filter: blur(3em);
-  filter: blur();
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-  border-radius: 0.5em;
-  overflow: hidden;
-  display: flex;
-  flex-flow: column;
-  flex: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.disclaimer {
+  font-size: 0.5em;
   margin: 0.5em;
+  padding: 0.5em;
+  visibility: hidden;
 }
 
-@media only screen and (min-device-width: 768px) {
-  .results {
-    height: 18em;
-    margin-left: 2em;
-    margin-right: 2em;
-  }
-}
-
-.thirdtext {
+.thirdtext,
+.midnighttext {
   position: relative;
   font-size: 1.25em;
   text-transform: uppercase;
@@ -159,15 +85,11 @@ body {
   word-spacing: 2px;
   text-align: center;
   margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
-@media only screen and (min-device-width: 768px) {
-  .thirdtext {
-    font-size: 2em;
-  }
-}
-
-.third {
+.third,
+.midnight {
   position: relative;
   font-size: 1.25em;
   text-transform: uppercase;
@@ -179,203 +101,93 @@ body {
   margin: 0em;
 }
 
-@media only screen and (min-device-width: 768px) {
-  .third {
-    font-size: 2em;
-  }
-}
-
-.disclaimer {
+.jamilabablogo {
+  height: 8.5em;
   position: relative;
-  font-size: 0.5em;
-  text-transform: uppercase;
-  font-weight: 300;
-  text-align: center;
-  visibility: hidden;
 }
 
-@media only screen and (min-device-width: 768px) {
-  .disclaimer {
-    font-size: 1em;
-  }
-}
-
-.plug {
+.jamilababtext {
   position: relative;
   font-size: 1em;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 1px;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  box-sizing: border-box; 
+  position: fixed;
+  overflow-y: scroll;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-color: white;
+  padding: 3em;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
 }
 
 @media only screen and (min-device-width: 768px) {
-  .plug {
-    font-size: 2em;
-  }
-}
-
-.plzdonatebro {
-  background-color: rgba(255, 255, 255, 0.45);
-  height: 12em;
-  backdrop-filter: blur(3em);
-  filter: blur();
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-  border-radius: 0.5em;
-  overflow: hidden;
-  flex-flow: column;
-  flex: 50%;
-  margin: 0.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-@media only screen and (min-device-width: 768px) {
-  .plzdonatebro {
+  .input,
+  .results,
+  .jamilabab {
     height: 18em;
     margin-left: 2em;
     margin-right: 2em;
   }
-}
-
-.donate-crypto-box {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 0.5em;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: text;
-}
-
-.coin {
-  display: inline-block;
-  position: relative;
-  min-width: 3em;
-  min-height: 3em;
-  -webkit-animation: spin 3s cubic-bezier(0.3, 2, 0.4, 0.8) infinite both;
-  animation: spin 3s cubic-bezier(0.3, 2, 0.4, 0.8) infinite both;
-  transform-style: preserve-3d;
-  vertical-align: middle;
-}
-@-webkit-keyframes spin {
-  0%,
-  10% {
-    transform: rotate(-10deg) perspective(400px);
+  .maghribtext,
+  .fajrtext {
+    font-size: 2em;
+    margin-bottom: 2px;
   }
-  90%,
-  100% {
-    transform: rotate(-10deg) perspective(400px) rotateY(180deg);
+  .maghribinput,
+  .fajrinput {
+    position: relative;
+    font-size: 1.5em;
   }
-}
-@keyframes spin {
-  0%,
-  10% {
-    transform: rotate(-10deg) perspective(400px);
+  .calculate {
+    font-size: 1.5em;
   }
-  90%,
-  100% {
-    transform: rotate(-10deg) perspective(400px) rotateY(180deg);
+  .thirdtext,
+  .midnighttext {
+    font-size: 2em;
   }
-}
-
-.coin-face {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 50%;
-}
-.coin-face:nth-child(1) {
-  transform: translateZ(-0.2em) rotateY(-180deg);
-}
-.coin-face:nth-child(2) {
-  transform: translateZ(-0.1em);
-}
-.coin-face:nth-child(4) {
-  transform: translateZ(0.1em);
-}
-.coin-face:nth-child(5) {
-  transform: translateZ(0.2em);
-}
-.coin-face svg {
-  width: 100%;
-  height: 100%;
-}
-
-.coin-address {
-  flex: 1;
-  font-size: 0.6em;
-  text-align: center;
-  margin-left: 1em;
-  border-width: 0 0 2px;
-  border-color: rgba(0, 0, 0, 0.1);
-  transition: border-color 0.3s;
-  background: transparent;
-  outline: none;
-}
-
-@media only screen and (min-device-width: 768px) {
-  .coin-address {
-    font-size: 1.3em;
+  .third,
+  .midnight {
+    font-size: 2em;
   }
-}
-
-.coin-address:hover {
-  transition-duration: 0.1s;
-}
-
-.btc .coin-face {
-  background: shade(#ff9900, 35%);
-}
-.btc .coin-face:nth-child(1),
-.btc .coin-face:nth-child(5) {
-  background: #ff9900;
-}
-.btc .coin-address:hover,
-.btc .coin-address:focus {
-  border-color: #ff9900;
-}
-
-.eth .coin-face {
-  background: shade(#6f7cba, 35%);
-}
-.eth .coin-face:nth-child(1),
-.eth .coin-face:nth-child(5) {
-  background: #6f7cba;
-}
-.eth .coin-address:hover,
-.eth .coin-address:focus {
-  border-color: #6f7cba;
-}
-
-.bnb .coin-face {
-  background: shade(#ff9900, 35%);
-}
-.bnb .coin-face:nth-child(1),
-.bnb .coin-face:nth-child(5) {
-  background: #ff9900;
-}
-.bnb .coin-address:hover,
-.bnb .coin-address:focus {
-  border-color: #ff9900;
-}
-
-.donate-crypto-box:nth-child(1) .coin {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
-
-.donate-crypto-box:nth-child(2) .coin {
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-}
-
-.donate-crypto-box:nth-child(3) .coin {
-  -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s;
+  .disclaimer {
+    font-size: 1em;
+  }
+  .jamilabablogo {
+    height: 12.5em;
+  }
+  .jamilababtext {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 1px;
+  }
+  .modal {
+    left: 20vw;
+    width: 60vw;
+    font-size: 1.5em;
+  }
 }
