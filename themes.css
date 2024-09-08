@@ -151,7 +151,7 @@ body {
   .input,
   .results,
   .jamilabab {
-    height: 18em;
+    height: auto;
     margin-left: 2em;
     margin-right: 2em;
   }
