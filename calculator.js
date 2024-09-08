@@ -31,27 +31,28 @@ let calculateTimes = () => {
     window.alert(
       "Are you sure you have entered the times for Maghrib and Fajr correctly? Try again."
     );
-  } else {
-    maghrib = dayjs(`2000-01-01 ${document.getElementById("maghrib").value}`);
-    fajr = dayjs(`2000-01-02 ${document.getElementById("fajr").value}`);
-
-    difference = fajr.diff(maghrib);
-    thirdOfTheDifference = difference / 3;
-    halfOfTheDifference = difference / 2;
-
-    lastThirdOfTheNight = fajr.subtract(thirdOfTheDifference, "milliseconds").format("HH:mm");
-    midnight = fajr.subtract(halfOfTheDifference, "milliseconds").format("HH:mm");
-
-    lastThirdOfTheNightTimeStart.innerHTML = lastThirdOfTheNight;
-    lastThirdOfTheNightTimeStart.style.visibility = "visible";
-
-    midnightStart.innerHTML = midnight;
-    midnightStart.style.visibility = "visible";
-
-    document.getElementById("disclaimer").style.visibility = "visible";
-    document.querySelector(".userthird").innerHTML = lastThirdOfTheNight;
-    document.querySelector(".usermidnight").innerHTML = midnight;
+    return;
   }
+
+  maghrib = dayjs(`2000-01-01 ${document.getElementById("maghrib").value}`);
+  fajr = dayjs(`2000-01-02 ${document.getElementById("fajr").value}`);
+
+  difference = fajr.diff(maghrib);
+  thirdOfTheDifference = difference / 3;
+  halfOfTheDifference = difference / 2;
+
+  lastThirdOfTheNight = fajr.subtract(thirdOfTheDifference, "milliseconds").format("HH:mm");
+  midnight = fajr.subtract(halfOfTheDifference, "milliseconds").format("HH:mm");
+
+  lastThirdOfTheNightTimeStart.innerHTML = lastThirdOfTheNight;
+  lastThirdOfTheNightTimeStart.style.visibility = "visible";
+
+  midnightStart.innerHTML = midnight;
+  midnightStart.style.visibility = "visible";
+
+  document.getElementById("disclaimer").style.visibility = "visible";
+  document.querySelector(".userthird").innerHTML = lastThirdOfTheNight;
+  document.querySelector(".usermidnight").innerHTML = midnight;
 };
 
 document
