@@ -15,11 +15,15 @@ const closeModal = () => {
 
 let lastThirdOfTheNightTimeStart = document.getElementById("third");
 let midnightStart = document.getElementById("midnight");
+let firstThirdOfTheNightTimeStart = document.getElementById("firstthird");
+
 let difference = 0;
 let thirdOfTheDifference = 0;
 let halfOfTheDifference = 0;
+
 let lastThirdOfTheNight = 0;
 let midnight = 0;
+let firstThirdOfTheNight = 0;
 
 let calculateTimes = () => {
   let maghribTime = document.getElementById("maghrib").value;
@@ -43,14 +47,22 @@ let calculateTimes = () => {
 
     lastThirdOfTheNight = fajr.subtract(thirdOfTheDifference, "milliseconds").format("HH:mm");
     midnight = fajr.subtract(halfOfTheDifference, "milliseconds").format("HH:mm");
+    firstThirdOfTheNight = fajr.subtract(thirdOfTheDifference * 2, "milliseconds").format("HH:mm");
 
     lastThirdOfTheNightTimeStart.innerHTML = lastThirdOfTheNight;
     lastThirdOfTheNightTimeStart.style.visibility = "visible";
+
     midnightStart.innerHTML = midnight;
     midnightStart.style.visibility = "visible";
+
+    firstThirdOfTheNightTimeStart.innerHTML = firstThirdOfTheNight;
+    firstThirdOfTheNightTimeStart.style.visibility = "visible";
+
     document.getElementById("disclaimer").style.visibility = "visible";
+
     document.querySelector(".userthird").innerHTML = lastThirdOfTheNight;
     document.querySelector(".usermidnight").innerHTML = midnight;
+    document.querySelector(".userfirstthird").innerHTML = firstThirdOfTheNight;
   }
 };
 

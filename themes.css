@@ -77,7 +77,8 @@ body {
 }
 
 .thirdtext,
-.midnighttext {
+.midnighttext,
+.firstthirdtext {
   position: relative;
   font-size: 1.25em;
   text-transform: uppercase;
@@ -89,7 +90,8 @@ body {
 }
 
 .third,
-.midnight {
+.midnight,
+.firstthird {
   position: relative;
   font-size: 1.25em;
   text-transform: uppercase;
@@ -167,11 +169,13 @@ body {
     font-size: 1.5em;
   }
   .thirdtext,
-  .midnighttext {
+  .midnighttext,
+  .firstthirdtext {
     font-size: 2em;
   }
   .third,
-  .midnight {
+  .midnight,
+  .firstthird {
     font-size: 2em;
   }
   .disclaimer {
