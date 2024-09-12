@@ -18,7 +18,6 @@ body {
 .results,
 .jamilabab {
   background-color: rgba(255, 255, 255, 0.45);
-  height: 12em;
   backdrop-filter: blur(3em);
   filter: blur();
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
@@ -147,11 +146,28 @@ body {
   z-index: 5;
 }
 
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 320px) {
   .input,
   .results,
   .jamilabab {
-    height: 18em;
+    font-size: 0.95em;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .input,
+  .results,
+  .jamilabab {
+    font-size: 1.4em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .input,
+  .results,
+  .jamilabab {
+    height: auto;
+    font-size: 0.90em;
     margin-left: 2em;
     margin-right: 2em;
   }
@@ -193,5 +209,13 @@ body {
     left: 20vw;
     width: 60vw;
     font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .input,
+  .results,
+  .jamilabab {
+    font-size: 0.93em;
   }
 }
