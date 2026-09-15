@@ -115,6 +115,14 @@ body {
   margin-bottom: 1px;
 }
 
+.ad-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em;
+  min-height: 90px;
+}
+
 .hidden {
   display: none;
 }
@@ -184,6 +192,10 @@ body {
     font-size: 2em;
     margin-top: 0;
     margin-bottom: 1px;
+  }
+  .ad-container {
+    margin-left: 2em;
+    margin-right: 2em;
   }
   .modal {
     left: 20vw;
