@@ -67,13 +67,19 @@
         <p class="midnight" id="midnight">0</p>
         <button class="disclaimer" id="disclaimer">DISCLAIMER (MUST READ)</button>
       </div>
-      <div class="ad-container">
+      <div class="ad-container" id="ad-banner">
         <!-- HalalSpark Enhanced Ad Script v3.0 - banner -->
         <script src="https://ads.halalspark.co.uk/get-ad-script-banner?placement_id=7d218d72-c248-411a-b6bd-3d1e1cc8cb37&domain=https://thirdofthenight.com&_v=3.0" async></script>
       </div>
-      <div class="ad-container">
+      <div class="ad-container" id="ad-footer">
         <!-- HalalSpark Enhanced Ad Script v3.0 - footer -->
         <script src="https://ads.halalspark.co.uk/get-ad-script-footer?placement_id=02eb303b-1a0d-4ebe-8fc4-04a5480ec622&domain=https://thirdofthenight.com&_v=3.0" async></script>
+      </div>
+      <div class="adblock-fallback hidden" id="adblock-fallback">
+        <a href="https://www.paypal.com/paypalme/thirdofthenight">
+          <img src="tips.png" class="jamilabablogo">
+        </a>
+        <h2 class="adblock-text">This site has halal ads. Please disable your ad blocker, or <a href="https://www.paypal.com/paypalme/thirdofthenight">click here to send a tip</a> ❤</h2>
       </div>
     </div>
     <div class="modal hidden">
@@ -92,5 +98,22 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="calculator.js"></script>
+    <script>
+      setTimeout(function () {
+        var banner = document.getElementById("ad-banner");
+        var footer = document.getElementById("ad-footer");
+        var bannerHasAd = banner && banner.querySelector("iframe, img, ins, [data-hs], div[id]");
+        var footerHasAd = footer && footer.querySelector("iframe, img, ins, [data-hs], div[id]");
+        if (!bannerHasAd && !footerHasAd) {
+          banner.style.display = "none";
+          footer.style.display = "none";
+          var fallback = document.getElementById("adblock-fallback");
+          if (fallback) {
+            fallback.classList.remove("hidden");
+            fallback.style.display = "flex";
+          }
+        }
+      }, 3000);
+    </script>
   </body>
 </html>
