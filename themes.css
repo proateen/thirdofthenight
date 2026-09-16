@@ -6,12 +6,29 @@ html {
 body {
   font-family: "Nunito", sans-serif;
   font-weight: 200;
-  height: 100%;
   color: #333;
   background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
   background-size: cover;
   background-repeat: no-repeat;
-  display: grid;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.site-heading {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0.5em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .input,
@@ -26,9 +43,6 @@ body {
   overflow: hidden;
   display: flex;
   flex-flow: column;
-  flex: 50%;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   margin: 0.5em;
 }
@@ -121,6 +135,8 @@ body {
   align-items: center;
   margin: 0.5em;
   min-height: 90px;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .adblock-fallback {
@@ -128,10 +144,13 @@ body {
   backdrop-filter: blur(3em);
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   border-radius: 0.5em;
+  display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0.5em;
   padding: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .adblock-text {
@@ -144,7 +163,56 @@ body {
 
 .adblock-text a {
   color: #333;
+  text-decoration: underline;
   font-weight: bold;
+}
+
+.seo-content {
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(3em);
+  border-radius: 0.5em;
+  margin: 0.5em;
+  padding: 1.2em 1.5em;
+  line-height: 1.6;
+}
+
+.seo-content h2 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+.seo-content h2:first-child {
+  margin-top: 0;
+}
+
+.seo-content p {
+  font-size: 0.9em;
+  margin: 0.4em 0;
+}
+
+.seo-content ol {
+  font-size: 0.9em;
+  margin: 0.4em 0;
+  padding-left: 1.5em;
+}
+
+.seo-content details {
+  margin: 0.4em 0;
+}
+
+.seo-content summary {
+  font-size: 0.95em;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.4em 0;
+}
+
+.seo-content details p {
+  font-size: 0.85em;
+  margin: 0.2em 0 0.6em 0;
 }
 
 .hidden {
@@ -178,6 +246,10 @@ body {
 }
 
 @media only screen and (min-device-width: 768px) {
+  .site-heading {
+    font-size: 1.6em;
+    margin: 0.3em 2em 0;
+  }
   .input,
   .results,
   .jamilabab {
@@ -224,6 +296,24 @@ body {
   }
   .adblock-text {
     font-size: 1.2em;
+  }
+  .seo-content {
+    margin-left: 2em;
+    margin-right: 2em;
+    padding: 1.5em 2.5em;
+  }
+  .seo-content h2 {
+    font-size: 1.3em;
+  }
+  .seo-content p,
+  .seo-content ol {
+    font-size: 1em;
+  }
+  .seo-content summary {
+    font-size: 1.1em;
+  }
+  .seo-content details p {
+    font-size: 0.95em;
   }
   .modal {
     left: 20vw;
