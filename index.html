@@ -194,5 +194,22 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="calculator.js"></script>
+    <script>
+      setTimeout(function () {
+        var banner = document.getElementById("ad-banner");
+        var footer = document.getElementById("ad-footer");
+        var bannerHasAd = banner && banner.querySelector("iframe, img, ins, [data-hs], div[id]");
+        var footerHasAd = footer && footer.querySelector("iframe, img, ins, [data-hs], div[id]");
+        if (!bannerHasAd && !footerHasAd) {
+          banner.style.display = "none";
+          footer.style.display = "none";
+          var fallback = document.getElementById("adblock-fallback");
+          if (fallback) {
+            fallback.classList.remove("hidden");
+            fallback.style.display = "flex";
+          }
+        }
+      }, 3000);
+    </script>
   </body>
 </html>

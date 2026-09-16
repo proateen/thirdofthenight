@@ -3,3 +3,9 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+[[redirects]]
+  from = "https://www.thirdofthenight.com/*"
+  to = "https://thirdofthenight.com/:splat"
+  status = 301
+  force = true
