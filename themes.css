@@ -3,6 +3,7 @@
 html {
   min-height: 100%;
 }
+
 body {
   font-family: "Nunito", sans-serif;
   font-weight: 200;
@@ -13,24 +14,26 @@ body {
   margin: 0;
 }
 
+/* ── Above-fold wrapper: exactly one viewport tall ── */
 .wrapper {
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
 }
 
 .site-heading {
-  font-size: 1.1em;
+  font-size: clamp(0.6rem, 2.5dvh, 1.1em);
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
   color: rgba(255, 255, 255, 0.95);
-  margin: 0 0.5em;
+  margin: 0.3em 0.5em 0;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   flex-shrink: 0;
 }
 
+/* ── Three equal viewport sections ── */
 .input,
 .results,
 .jamilabab {
@@ -41,28 +44,29 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1 1 0;
+  min-height: 0;
   align-items: center;
   justify-content: space-evenly;
-  margin: 0.5em;
+  margin: 0.25em 0.5em;
 }
 
+/* ── Font sizes scale with viewport height on mobile ── */
 .maghribtext,
 .fajrtext {
   position: relative;
-  font-size: 1.8em;
+  font-size: clamp(1rem, 3.5dvh, 1.8em);
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
   text-align: center;
-  margin: 0em;
-  margin-bottom: 2px;
+  margin: 0;
 }
 
 .maghribinput,
 .fajrinput {
   align-content: center;
-  font-size: 1.2em;
+  font-size: clamp(0.85rem, 2.2dvh, 1.2em);
 }
 
 .calculate,
@@ -70,53 +74,70 @@ body {
   position: relative;
   background: none;
   border: none;
-  font-size: 1.2em;
+  font-size: clamp(0.85rem, 2.2dvh, 1.2em);
   text-transform: uppercase;
   cursor: pointer;
   background-color: white;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
-  padding: 0.5em;
+  padding: 0.4em 0.8em;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgb(0 0 0 / 10%);
-  margin: 1em;
+  margin: 0.3em;
   outline: none;
 }
 
 .disclaimer {
-  font-size: 0.6em;
-  margin: 0.5em;
-  padding: 0.5em;
+  font-size: clamp(0.45rem, 1.2dvh, 0.6em);
+  margin: 0.2em;
+  padding: 0.3em 0.6em;
   visibility: hidden;
 }
 
 .thirdtext,
 .midnighttext {
   position: relative;
-  font-size: 1.6em;
+  font-size: clamp(0.9rem, 3dvh, 1.6em);
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
   text-align: center;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin: 0;
 }
 
 .third,
 .midnight {
   position: relative;
-  font-size: 1.6em;
+  font-size: clamp(0.9rem, 3dvh, 1.6em);
   text-transform: uppercase;
   font-weight: 1000;
   letter-spacing: 1px;
   word-spacing: 2px;
   text-align: center;
   visibility: hidden;
-  margin: 0em;
+  margin: 0;
+}
+
+/* ── Ad / fallback section (the third ⅓) ── */
+.ad-section {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.5em 0.25em;
+}
+
+.ad-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 0;
+  flex: 1;
 }
 
 .jamilabablogo {
-  height: 10em;
+  height: clamp(3em, 12dvh, 10em);
   position: relative;
 }
 
@@ -129,15 +150,6 @@ body {
   margin-bottom: 1px;
 }
 
-.ad-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0.5em;
-  min-height: 90px;
-  flex: 1;
-}
-
 .adblock-fallback {
   background-color: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(3em);
@@ -146,17 +158,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0.5em;
-  padding: 1em;
+  margin: 0;
+  padding: 0.5em;
   flex: 1;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .adblock-text {
-  font-size: 0.9em;
+  font-size: clamp(0.65rem, 1.8dvh, 0.9em);
   text-align: center;
   text-transform: none;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .adblock-text a {
@@ -164,6 +177,7 @@ body {
   font-weight: bold;
 }
 
+/* ── SEO content (below fold) ── */
 .seo-content {
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(3em);
@@ -218,8 +232,9 @@ body {
   display: none;
 }
 
+/* ── Modal ── */
 .modal {
-  box-sizing: border-box; 
+  box-sizing: border-box;
   position: fixed;
   overflow-y: scroll;
   top: 10%;
@@ -244,7 +259,13 @@ body {
   z-index: 5;
 }
 
+/* ── Desktop (768px+) ── */
 @media only screen and (min-device-width: 768px) {
+  .wrapper {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
   .site-heading {
     font-size: 1.6em;
     margin: 0.3em 2em 0;
@@ -254,8 +275,7 @@ body {
   .jamilabab {
     height: 18em;
     flex: none;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin: 0.5em 2em;
   }
   .maghribtext,
   .fajrtext {
@@ -269,10 +289,14 @@ body {
   }
   .calculate {
     font-size: 1.5em;
+    padding: 0.5em;
+    margin: 1em;
   }
   .thirdtext,
   .midnighttext {
     font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
   .third,
   .midnight {
@@ -280,6 +304,8 @@ body {
   }
   .disclaimer {
     font-size: 1em;
+    margin: 0.5em;
+    padding: 0.5em;
   }
   .jamilabablogo {
     height: 12.5em;
@@ -289,10 +315,15 @@ body {
     margin-top: 0;
     margin-bottom: 1px;
   }
-  .ad-container,
+  .ad-section {
+    flex: 1;
+    margin: 0.5em 2em;
+  }
+  .ad-container {
+    min-height: 90px;
+  }
   .adblock-fallback {
-    margin-left: 2em;
-    margin-right: 2em;
+    padding: 1em;
   }
   .adblock-text {
     font-size: 1.2em;
