@@ -14,16 +14,18 @@ body {
   margin: 0;
 }
 
-/* ── Above-fold wrapper: exactly one viewport tall ── */
+/* ── Above-fold wrapper: exactly one viewport tall ──
+   svh = small viewport height — stays stable when the
+   mobile URL bar hides/shows, preventing layout shift. */
 .wrapper {
   height: 100vh;
-  height: 100dvh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
 }
 
 .site-heading {
-  font-size: clamp(0.6rem, 2.5dvh, 1.1em);
+  font-size: clamp(0.6rem, 2.5svh, 1.1em);
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -55,7 +57,7 @@ body {
 .maghribtext,
 .fajrtext {
   position: relative;
-  font-size: clamp(1rem, 3.5dvh, 1.8em);
+  font-size: clamp(1rem, 3.5svh, 1.8em);
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
@@ -66,7 +68,7 @@ body {
 .maghribinput,
 .fajrinput {
   align-content: center;
-  font-size: clamp(0.85rem, 2.2dvh, 1.2em);
+  font-size: clamp(0.85rem, 2.2svh, 1.2em);
 }
 
 .calculate,
@@ -74,7 +76,7 @@ body {
   position: relative;
   background: none;
   border: none;
-  font-size: clamp(0.85rem, 2.2dvh, 1.2em);
+  font-size: clamp(0.85rem, 2.2svh, 1.2em);
   text-transform: uppercase;
   cursor: pointer;
   background-color: white;
@@ -88,7 +90,7 @@ body {
 }
 
 .disclaimer {
-  font-size: clamp(0.45rem, 1.2dvh, 0.6em);
+  font-size: clamp(0.45rem, 1.2svh, 0.6em);
   margin: 0.2em;
   padding: 0.3em 0.6em;
   visibility: hidden;
@@ -97,7 +99,7 @@ body {
 .thirdtext,
 .midnighttext {
   position: relative;
-  font-size: clamp(0.9rem, 3dvh, 1.6em);
+  font-size: clamp(0.9rem, 3svh, 1.6em);
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
@@ -108,7 +110,7 @@ body {
 .third,
 .midnight {
   position: relative;
-  font-size: clamp(0.9rem, 3dvh, 1.6em);
+  font-size: clamp(0.9rem, 3svh, 1.6em);
   text-transform: uppercase;
   font-weight: 1000;
   letter-spacing: 1px;
@@ -118,8 +120,10 @@ body {
   margin: 0;
 }
 
-/* ── Ad / fallback section (the third ⅓) ── */
-.ad-section {
+/* ── Third panel: HalalSpark slots + tip fallback ──
+   Class names intentionally avoid "ad" / "banner" /
+   "adblock" so cosmetic ad-filters don't hide them. */
+.third-panel {
   flex: 1 1 0;
   min-height: 0;
   display: flex;
@@ -127,7 +131,7 @@ body {
   margin: 0 0.5em 0.25em;
 }
 
-.ad-container {
+.hs-slot {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,7 +141,7 @@ body {
 }
 
 .jamilabablogo {
-  height: clamp(3em, 12dvh, 10em);
+  height: clamp(3em, 12svh, 10em);
   position: relative;
 }
 
@@ -150,7 +154,7 @@ body {
   margin-bottom: 1px;
 }
 
-.adblock-fallback {
+.tip-card {
   background-color: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(3em);
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
@@ -165,14 +169,14 @@ body {
   overflow: hidden;
 }
 
-.adblock-text {
-  font-size: clamp(0.65rem, 1.8dvh, 0.9em);
+.tip-text {
+  font-size: clamp(0.65rem, 1.8svh, 0.9em);
   text-align: center;
   text-transform: none;
   margin: 0;
 }
 
-.adblock-text a {
+.tip-text a {
   color: #333;
   font-weight: bold;
 }
@@ -264,7 +268,7 @@ body {
   .wrapper {
     height: auto;
     min-height: 100vh;
-    min-height: 100dvh;
+    min-height: 100svh;
   }
   .site-heading {
     font-size: 1.6em;
@@ -315,17 +319,17 @@ body {
     margin-top: 0;
     margin-bottom: 1px;
   }
-  .ad-section {
+  .third-panel {
     flex: 1;
     margin: 0.5em 2em;
   }
-  .ad-container {
+  .hs-slot {
     min-height: 90px;
   }
-  .adblock-fallback {
+  .tip-card {
     padding: 1em;
   }
-  .adblock-text {
+  .tip-text {
     font-size: 1.2em;
   }
   .seo-content {
