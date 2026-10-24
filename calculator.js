@@ -30,11 +30,17 @@ let calculateTimes = () => {
       "Are you sure you have entered the times for Maghrib and Fajr correctly? Try again."
     );
   } else {
-    let maghrib = dayjs(`2000-01-01 ${maghribTime}`);
-    let fajr = dayjs(`2000-01-02 ${fajrTime}`);
+    let now = new Date();
+    let today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+    let next = new Date(now);
+    next.setDate(next.getDate() + 1);
+    let tomorrow = `${next.getFullYear()}-${String(next.getMonth() + 1).padStart(2, '0')}-${String(next.getDate()).padStart(2, '0')}`;
 
-    if (maghrib.isBefore(dayjs(`2000-01-01 ${fajrTime}`))) {
-      fajr = dayjs(`2000-01-01 ${fajrTime}`);
+    let maghrib = dayjs(`${today} ${maghribTime}`);
+    let fajr = dayjs(`${tomorrow} ${fajrTime}`);
+
+    if (maghrib.isBefore(dayjs(`${today} ${fajrTime}`))) {
+      fajr = dayjs(`${today} ${fajrTime}`);
     }
 
     difference = fajr.diff(maghrib);
