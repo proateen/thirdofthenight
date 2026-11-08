@@ -50,13 +50,13 @@ let calculateTimes = () => {
     lastThirdOfTheNight = fajr.subtract(thirdOfTheDifference, "milliseconds").format("HH:mm");
     midnight = fajr.subtract(halfOfTheDifference, "milliseconds").format("HH:mm");
 
-    lastThirdOfTheNightTimeStart.innerHTML = lastThirdOfTheNight;
+    lastThirdOfTheNightTimeStart.textContent = lastThirdOfTheNight;
     lastThirdOfTheNightTimeStart.style.visibility = "visible";
-    midnightStart.innerHTML = midnight;
+    midnightStart.textContent = midnight;
     midnightStart.style.visibility = "visible";
     document.getElementById("disclaimer").style.visibility = "visible";
-    document.querySelector(".userthird").innerHTML = lastThirdOfTheNight;
-    document.querySelector(".usermidnight").innerHTML = midnight;
+    document.querySelector(".userthird").textContent = lastThirdOfTheNight;
+    document.querySelector(".usermidnight").textContent = midnight;
   }
 };
 
