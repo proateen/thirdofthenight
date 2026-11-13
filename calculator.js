@@ -13,15 +13,15 @@ const closeModal = () => {
   overlay.classList.add("hidden");
 };
 
-let lastThirdOfTheNightTimeStart = document.getElementById("third");
-let midnightStart = document.getElementById("midnight");
+const lastThirdOfTheNightTimeStart = document.getElementById("third");
+const midnightStart = document.getElementById("midnight");
 let difference = 0;
 let thirdOfTheDifference = 0;
 let halfOfTheDifference = 0;
 let lastThirdOfTheNight = 0;
 let midnight = 0;
 
-let calculateTimes = () => {
+const calculateTimes = () => {
   let maghribTime = document.getElementById("maghrib").value;
   let fajrTime = document.getElementById("fajr").value;
 

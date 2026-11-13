@@ -89,6 +89,12 @@ body {
   outline: none;
 }
 
+.calculate:focus-visible,
+.disclaimer:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
 .disclaimer {
   font-size: clamp(0.45rem, 1.2svh, 0.6em);
   margin: 0.2em;
@@ -227,6 +233,11 @@ body {
   padding: 0.4em 0;
 }
 
+.seo-content summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
 .seo-content details p {
   font-size: 0.85em;
   margin: 0.2em 0 0.6em 0;
@@ -354,5 +365,17 @@ body {
     left: 20vw;
     width: 60vw;
     font-size: 1.5em;
+  }
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
